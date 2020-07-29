@@ -11,13 +11,14 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
+
 <body>
     <header class="fixed-top">
-        <div class="bg-dark text-light clearfix pr-4 pt-2 small">
+        <div class="bg-dark text-white-50 clearfix pr-4 pt-2 pr-5 small">
             <p class="mb-0 small"><span class="float-right">8350 Kennedy Road • Markham, ON L3R 0W4</span></p>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""><span class="p-3">Mercedes-Benz</span></a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+            <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt=""><span class="p-3">Mercedes-Benz</span></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">View Inventory <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="inventory.php">View Inventory <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>

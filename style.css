@@ -1,6 +1,11 @@
-#hero-carousel {
-  top: 110px;
+body {
+  /* to prevent fixed header hiding top of body */
+  padding-top: 110px;
 }
+.bg-dark {
+  background-color: #111 !important;
+}
+
 .cta {
   position: absolute;
   left: 50%;
@@ -8,11 +13,14 @@
   width: 90%;
   max-width: 1000px;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 2em;
   z-index: 2;
 }
-footer {
-  position: relative;
-  top: 110px;
+
+.inventory-card {
+  background-color: #ddd !important;
+}
+.inventory-card img {
+  max-width: 100%;
 }

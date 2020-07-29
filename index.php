@@ -6,13 +6,13 @@ include('templates/header.php'); ?>
 <div id="hero-carousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="images/benz1.jpg" class="d-block w-100" alt="Mercedes Benz">
+            <img src="images/header-images/benz1.jpg" class="d-block w-100" alt="Mercedes Benz">
         </div>
         <div class="carousel-item">
-            <img src="images/benz2.jpg" class="d-block w-100" alt="Mercedes Benz">
+            <img src="images/header-images/benz2.jpg" class="d-block w-100" alt="Mercedes Benz">
         </div>
         <div class="carousel-item">
-            <img src="images/benz3.jpg" class="d-block w-100" alt="Mercedes Benz">
+            <img src="images/header-images/benz3.jpg" class="d-block w-100" alt="Mercedes Benz">
         </div>
     </div>
     

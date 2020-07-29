@@ -1,24 +1,24 @@
 
-<footer class="bg-dark text-light pt-4 pb-1">
+<footer class="bg-dark text-light">
     <div class="container">
-        <div class="row">
+        <div class="row py-4">
             <div class="col-lg-4">
                 <p>Mercedes-Benz Toronto</p>
-                <a href="#" class="p-1"><i class="fab fa-twitter-square"></i></a>
-                <a href="#" class="p-1"><i class="fab fa-facebook-square"></i></a>
-                <a href="#" class="p-1"><i class="fab fa-instagram-square"></i></a>
-                <a href="#" class="p-1"><i class="fab fa-google"></i></a>
+                <a href="#" class="p-1 text-secondary"><i class="fab fa-twitter-square"></i></a>
+                <a href="#" class="p-1 text-secondary"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" class="p-1 text-secondary"><i class="fab fa-instagram-square"></i></a>
+                <a href="#" class="p-1 text-secondary"><i class="fab fa-google"></i></a>
             </div>
         </div>
     </div>
     <hr class="bg-secondary">
     <div class="container  small">
-        <div class="row">
+        <div class="row  text-secondary">
             <div class="col-lg-4">
                 <p class="small">Copyright © 2020 Mercedes-Benz Toronto</p>
             </div>
             <div class="col-lg-4">
-                <p class="small">Developed by <a href="https://parsifar.com">Ali Parsifar</a></p>
+                <p class="small">Developed by <a class="text-secondary" href="https://parsifar.com">Ali Parsifar</a></p>
             </div>
         </div>
         
