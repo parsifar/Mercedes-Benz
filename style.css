@@ -1,0 +1,18 @@
+#hero-carousel {
+  top: 110px;
+}
+.cta {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 90%;
+  max-width: 1000px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2em;
+  z-index: 2;
+}
+footer {
+  position: relative;
+  top: 110px;
+}
