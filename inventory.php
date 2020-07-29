@@ -40,7 +40,7 @@ if ($result = $conn -> query($query)){
             </div>
             <div class="row pt-3">
                 <div class="col-6">
-                    <a href="#" class="btn btn-secondary px-4">Details</a>
+                    <a href="details.php?id=<?php echo $row['id']; ?>" class="btn btn-secondary px-4">Details</a>
                 </div>
                 <div class="col-6">
                     <a href="#" class="btn btn-primary float-right px-3">Inquire Now</a>
@@ -52,3 +52,8 @@ if ($result = $conn -> query($query)){
 }else{
     echo "No results!";
 }
+
+
+
+include('templates/footer.php'); 
+?>
