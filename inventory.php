@@ -5,6 +5,40 @@ include('templates/header.php');
 //connect to db
 include('config/connect-db.php');
 
+//check to se if there's a delete query in the url
+if (isset($_GET['delete_id'])){
+    $id_to_delete = $conn -> real_escape_string($_GET['delete_id']);
+    //query the db to remove the car
+    $query = "DELETE FROM inventory WHERE id = $id_to_delete";
+    if ($conn -> query($query)){ ?>
+
+        <div class="container p-3">
+            <div class="alert alert-warning" role="alert">
+            The vehicle has been removed successfully!
+            </div>
+        </div>
+        
+    <?php }else{
+        echo "Error removing the record";
+    }
+
+    // remove the car's images folder
+    $dir_to_delete = 'images/inventory/' . $id_to_delete;
+    // first all the images in the folder should be removed
+    $images_in_dir = scandir($dir_to_delete);
+    foreach($images_in_dir as $image_in_dir){
+        if($image_in_dir !='.' && $image_in_dir !='..'){
+            unlink($dir_to_delete.'/'.$image_in_dir);
+        }  
+    }
+
+    //then remove the empty folder
+    if (! rmdir($dir_to_delete)){
+        echo "Error removing the images directory";
+    }
+
+} // end of delete proccess
+
 //get the inventory from db
 // create the query string
 $query = "SELECT * FROM inventory";
@@ -13,7 +47,7 @@ $query = "SELECT * FROM inventory";
 if ($result = $conn -> query($query)){
 
     while ($row = $result -> fetch_assoc()): ?>
-        <div class="container inventory-card  p-3 my-2">
+        <div class="container inventory-card  p-3 my-4">
             <div class="row">
                 <div class="col-lg-4 mt-4">
                     <img src=<?php echo explode(',',$row['images'])[0]; ?> alt="">

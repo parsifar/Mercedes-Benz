@@ -79,7 +79,7 @@ if (isset($_GET['id'])){
             </div>
 
             <!-- Info section  -->
-            <div class="container-fluid py-5">
+            <div class="container-fluid pt-5">
                 <div class="container bg-light py-3">
                     <div class="row">
                         <div class="col text-center">
@@ -175,6 +175,34 @@ if (isset($_GET['id'])){
                         </div>
                     </div>
 
+                </div>
+                <div class="container py-5">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-danger float-right" onclick="$('#delete-confirmation-modal').modal();">Delete This Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delete Confirmation Modal -->
+            <div class="modal" tabindex="-1" role="dialog" id="delete-confirmation-modal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Delete Confirmation</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>You're going to remove <?php echo $car['year'].' '.$car['model']; ?></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="inventory.php?delete_id=<?php echo $car['id']; ?>" class="btn btn-danger">DELETE</a>
+                    </div>
+                    </div>
                 </div>
             </div>
 

@@ -95,8 +95,7 @@ if(isset($_POST['submit'])){
         //query the db and get the id of inserted record
         if ($conn -> query($query)) {
             $inserted_record_id = $conn -> insert_id;
-            echo $conn->affected_rows .'rows inserted. id= '.$inserted_record_id;
-
+            
             //upload the images to a folder named as the id 
             $target_dir = 'images/inventory/' . $inserted_record_id . '/';
 
@@ -119,13 +118,19 @@ if(isset($_POST['submit'])){
                         // the images are successfully moved, now we update the "images" field in the db
                         $query = "UPDATE inventory SET images = '$images_comma_seperated_list' WHERE id = $inserted_record_id";
                         // update the images field in the db
-                        if ($conn -> query($query)){ ?>
-                            <div class="alert alert-success" role="alert">
-                            You've successfully added the vehicle!
-                            </div>
-                        <?php }
+                        if (!$conn -> query($query)){ 
+                            echo "Problem in updating the db";
+                         }
                     }
-                }
+                }?>
+                <div class="container p-4">
+                    <div class="alert alert-success" role="alert">
+                    You've successfully added the vehicle!
+                    </div>
+                </div>
+                
+                <?php
+
             }
 
         } else{
