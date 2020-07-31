@@ -39,6 +39,62 @@ include('templates/header.php'); ?>
     </div>
 </div>  <!-- End of Hero Section Slider -->
 
+<!-- four cards section -->
+<div class="container p-5">
+
+    <div class="row">
+
+        <div class="col-xl-3 col-lg-6 my-4">
+            <a href="inventory.php" class="text-white" style="text-decoration:none;">
+                <div class="card bg-dark text-white text-center" style="width:100%;">
+                        <i class="fas fa-search card-img-top pt-4"></i>
+                        <div class="card-body bg-light text-dark">
+                            <h5 class="card-title">Search Inventory</h5>
+                        </div>
+                        <div class="blue-slider bg-primary pt-4"><h3>Learn More</h3></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-xl-3 col-lg-6 my-4">
+            <a href="inventory.php" class="text-white" style="text-decoration:none;">
+                <div class="card bg-dark text-white text-center" style="width:100%;">
+                        <i class="fas fa-wrench card-img-top pt-4"></i>
+                        <div class="card-body bg-light text-dark">
+                            <h5 class="card-title">Schedule Service</h5>
+                        </div>
+                        <div class="blue-slider bg-primary pt-4"><h3>Learn More</h3></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-xl-3 col-lg-6 my-4">
+            <a href="inventory.php" class="text-white" style="text-decoration:none;">
+                <div class="card bg-dark text-white text-center" style="width:100%;">
+                        <i class="fas fa-car card-img-top pt-4"></i>
+                        <div class="card-body bg-light text-dark">
+                            <h5 class="card-title">New Vehicle</h5>
+                        </div>
+                        <div class="blue-slider bg-primary pt-4"><h3>Learn More</h3></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-xl-3 col-lg-6 my-4">
+            <a href="inventory.php" class="text-white" style="text-decoration:none;">
+                <div class="card bg-dark text-white text-center" style="width:100%;">
+                        <i class="fas fa-car card-img-top pt-4 "></i>
+                        <div class="card-body bg-light text-dark">
+                            <h5 class="card-title">Certified Pre-Owned</h5>
+                        </div>
+                        <div class="blue-slider bg-primary pt-4"><h3>Learn More</h3></div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+
 
 
 

@@ -17,10 +17,38 @@ body {
   padding: 2em;
   z-index: 2;
 }
+i.card-img-top {
+  font-size: 9em;
+  height: 230px;
+  transition: 200ms ease-in-out;
+}
+.card {
+  overflow: hidden;
+}
+.card:hover .blue-slider {
+  bottom: 0;
+}
+.card:hover .card-img-top {
+  font-size: 11em;
+}
+.card .blue-slider {
+  position: absolute;
+  height: 78px;
+  width: 100%;
+  bottom: -75px;
+  left: 0;
+  transition: 200ms ease-in-out;
+}
 
 .inventory-card {
   background-color: #ddd !important;
 }
 .inventory-card img {
   max-width: 100%;
+}
+
+.book-title {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
