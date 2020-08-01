@@ -140,7 +140,7 @@ include('templates/header.php'); ?>
 <!-- Google Map Script - first connect to the api using the api key -->
 
 <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRS-s3U-f4TcHp1_x4P8k4kAFXeC-CYaA&callback=initMap&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=key&callback=initMap&libraries=&v=weekly"
       defer
     ></script>
 
@@ -151,7 +151,7 @@ include('templates/header.php'); ?>
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: target,
-    zoom: 17,
+    zoom: 16,
     styles:[
             {
                 "elementType": "geometry",
