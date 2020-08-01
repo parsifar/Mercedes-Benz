@@ -77,7 +77,7 @@ if ($result = $conn -> query($query)){
                     <a href="details.php?id=<?php echo $row['id']; ?>" class="btn btn-secondary px-4">Details</a>
                 </div>
                 <div class="col-6">
-                    <a href="#" class="btn btn-primary float-right px-3">Inquire Now</a>
+                    <a href="book-appointment.php?id=<?php echo $row['id']; ?>" class="btn btn-primary float-right px-3">Inquire Now</a>
                 </div>
             </div>
         </div>

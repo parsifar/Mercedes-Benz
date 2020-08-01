@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="./style.css">
     <!-- FAVICON -->
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- Slick JS -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="slick-theme.css">
+    <!-- PT SERIF GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,17 +38,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="book-appointment.php">Book an Appointment</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
                 </li>
                 
             </div>

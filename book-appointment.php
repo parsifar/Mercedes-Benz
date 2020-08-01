@@ -1,5 +1,31 @@
 <?php
 
+// initialize $msg to put in the text area
+$msg='';
+// check to se if there's an id in the query string
+if (isset($_GET['id'])){
+    //connect to db
+    include('config/connect-db.php');
+
+    //get the id of the car
+    $id = $conn -> real_escape_string($_GET['id']);
+
+    //query string
+    $query = "SELECT * FROM inventory WHERE id = $id";
+    if ($result = $conn -> query($query)){
+        if ($result -> num_rows >0){
+            $car = $result -> fetch_assoc();
+            $year = htmlspecialchars($car['year']);
+            $color = htmlspecialchars($car['exterior']);
+            $model = htmlspecialchars($car['model']);
+
+            $msg= 'I would like to get more information about '.$year . ' ' .$color . ' ' . $model;
+        }
+        
+    }
+    
+}
+
 include('templates/header.php'); ?>
 
 <div class="container-fluid p-0 position-relative">
@@ -25,7 +51,7 @@ include('templates/header.php'); ?>
         </div>
         <div class="form-group">
             <label for="msg">Tell us what you're looking for</label>
-            <textarea class="form-control" id="msg" rows="3"></textarea>
+            <textarea class="form-control" id="msg" rows="3" ><?php echo $msg; ?> </textarea>
         </div>
         
         <button type="submit" class="btn btn-primary btn-lg">Submit</button>

@@ -62,7 +62,7 @@ if (isset($_GET['id'])){
                             <p>Call or submit a web inquiry to connect with one of our friendly and knowledgeable Sales Consultants who will be happy to help you learn more and get a quote.
 
                             </p>
-                            <a href="#" class="btn btn-primary w-100"> Inquire Now</a>
+                            <a href="book-appointment.php?id=<?php echo $id; ?>" class="btn btn-primary w-100"> Inquire Now</a>
                             <hr class="bg-light">
                             <div class="row">
                                 <div class="col-4">
