@@ -70,3 +70,21 @@ i.card-img-top {
 .map {
   height: 400px;
 }
+
+@media (max-width: 850px) {
+  .cta h1 {
+    font-size: 2rem;
+  }
+  .cta a {
+    padding: 10px !important;
+  }
+}
+@media (max-width: 450px) {
+  .cta {
+    padding: 10px;
+  }
+
+  #cta-secondary-text {
+    display: none;
+  }
+}

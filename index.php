@@ -1,4 +1,8 @@
 <?php
+// include dotenv to hide sensitive data from users
+require_once('vendor/autoload.php');
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv -> load();
 
 include('templates/header.php'); ?>
 
@@ -6,13 +10,13 @@ include('templates/header.php'); ?>
 <div id="hero-carousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="images/header-images/benz2.jpg" class="d-block w-100" alt="Mercedes Benz">
+            <img src="images/header-images/benz2.jpg" class="d-block w-100" id ="slider-image-1" alt="Mercedes Benz">
         </div>
         <div class="carousel-item">
-            <img src="images/header-images/mercedes1.jpg" class="d-block w-100" alt="Mercedes Benz">
+            <img src="images/header-images/mercedes1.jpg" class="d-block w-100" id ="slider-image-2" alt="Mercedes Benz">
         </div>
         <div class="carousel-item">
-            <img src="images/header-images/benz3.jpg" class="d-block w-100" alt="Mercedes Benz">
+            <img src="images/header-images/benz3.jpg" class="d-block w-100" id ="slider-image-3" alt="Mercedes Benz">
         </div>
     </div>
     
@@ -25,7 +29,7 @@ include('templates/header.php'); ?>
                 </div> 
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6" id="cta-secondary-text">
                     <p>Browse our inventory and book your sales appointment now</p>
                     <p>Rest assured we are working every day to deliver a high level of service safely and responsibly in line with public health recommendations and guidelines.</p>
                 </div>
@@ -140,7 +144,7 @@ include('templates/header.php'); ?>
 <!-- Google Map Script - first connect to the api using the api key -->
 
 <script
-      src="https://maps.googleapis.com/maps/api/js?key=key&callback=initMap&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=<?php echo $_ENV['GOOGLE_MAPS_API_KEY']; ?>&callback=initMap&libraries=&v=weekly"
       defer
     ></script>
 
@@ -353,12 +357,22 @@ function initMap() {
   let marker = new google.maps.Marker({
       position: target,
       map: map,
-      animation: google.maps.Animation.BOUNCE,
+      animation: google.maps.Animation.DROP,
       icon:'images/logo.png',
       title:"We're Here!"
   })
 
 }
+</script>
+
+<!-- script to change the images in the hero slider in smaller screens -->
+<script>
+    if (window.innerWidth <=750){
+        document.getElementById('slider-image-1').src = 'images/header-images/benz-s-5.jpg'
+        document.getElementById('slider-image-2').src = 'images/header-images/benz-s-4.jpg'
+        document.getElementById('slider-image-3').src = 'images/header-images/benz-s-6.jpg'
+    }
+
 </script>
 
 

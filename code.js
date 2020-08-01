@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
   $(".testimonial-container").slick({
-    slidesToShow: 2,
+    slidesToShow: window.innerWidth <= 850 ? 1 : 2,
     infinite: true,
     slidesToScroll: 1,
     autoplay: true,
