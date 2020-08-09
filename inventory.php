@@ -3,8 +3,26 @@
 include('templates/header.php');
 
 //connect to db
-include('config/connect-db.php');
+include('config/connect-db.php'); ?>
 
+<!-- search form -->
+<form action="" method="POST">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col text-right p-2">
+                <label for="search-input" class="text-secondary">Search Anything</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="search-input" placeholder="i.e. 2017 Red C300" name="search">   
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<?php
 //check to se if there's a delete query in the url
 if (isset($_GET['delete_id'])){
     $id_to_delete = $conn -> real_escape_string($_GET['delete_id']);
@@ -39,12 +57,29 @@ if (isset($_GET['delete_id'])){
 
 } // end of delete proccess
 
-//get the inventory from db
-// create the query string
-$query = "SELECT * FROM inventory";
+// check if a search query is submitted - query based on the search
+if (isset($_POST['search'])){
+    require_once('search-parser.php');
+    $parsed_search = search_parser($_POST['search']);
+    
+    $query = "SELECT * FROM inventory";
+    $i=0;
+    foreach($parsed_search as $k => $v){
+        $operator = ($i===0)? 'WHERE' : 'AND';
+        
+        $query = $query .' ' . $operator. ' ' . $k . ' LIKE '. "'%$v%'";
+        $i++;
+    }
+    
+}else{
+    // If a search is not submitted then query all the inventory
+    // create the query string
+    $query = "SELECT * FROM inventory";
+}
 
 //query the db and output the results
-if ($result = $conn -> query($query)){
+$result = $conn -> query($query);
+if (mysqli_num_rows($result)){
 
     while ($row = $result -> fetch_assoc()): ?>
         <div class="container inventory-card  p-3 my-4">
@@ -83,8 +118,16 @@ if ($result = $conn -> query($query)){
         </div>
     <?php endwhile;
 
-}else{
-    echo "No results!";
+}else{ ?>
+    <div class="container">
+        <h2 class="text-secondary text-center m-4">No Results Found</h2>
+        <div class="text-center">
+            <img  src="images/old-mercedes.png" alt="">
+        </div>
+        
+    </div>
+
+<?php    
 }
 
 

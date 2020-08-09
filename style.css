@@ -88,3 +88,8 @@ i.card-img-top {
     display: none;
   }
 }
+@media (max-width: 1024px) {
+  .bg-div {
+    height: calc(0.55 * 100vw);
+  }
+}

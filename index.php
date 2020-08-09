@@ -124,10 +124,10 @@ include('templates/header.php'); ?>
 <!-- Welcome Section -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-6 p-0 bg-div">
-            
+        <div class="col-lg-6 p-0 bg-div">
+            .
         </div>
-        <div class="col-md-6 p-5">
+        <div class="col-lg-6 p-5">
             <h6>Welcome to</h6>
             <h3 class="mb-4">Mercedes-Benz Toronto</h3>
             <p>Mercedes-Benz Toronto is a new and pre-owned Toronto, ON Mercedes-Benz dealership. We proudly serve and ship to the Greater Toronto Area. In our online showroom, you’ll find an outstanding selection of Toronto, ON Mercedes-Benz cars and Mercedes-AMG® vehicles you might not find so easily elsewhere. Or perhaps you’re in the market for Mercedes-Benz vans or vehicles from our Corporate Fleet Program? We can help you with that too. We offer comprehensive service here at Mercedes-Benz Toronto!</p>
