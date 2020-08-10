@@ -4,6 +4,7 @@
 function search_parser($search_term){
     //first sanitize the input
     $sanitized_string = filter_var($search_term , FILTER_SANITIZE_STRING);
+    
     $lower_cased = strtolower($sanitized_string);
     $parts = explode(' ', $lower_cased);
 

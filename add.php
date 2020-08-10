@@ -189,6 +189,7 @@ if(isset($_POST['submit'])){
             <select class="form-control" id="body" name="body">
                 <option>Sedan</option>
                 <option>SUV</option>
+                <option>Coupe</option>
             </select>
         </div>
         <div class="form-group">

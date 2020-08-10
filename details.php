@@ -62,7 +62,8 @@ if (isset($_GET['id'])){
                             <p>Call or submit a web inquiry to connect with one of our friendly and knowledgeable Sales Consultants who will be happy to help you learn more and get a quote.
 
                             </p>
-                            <a href="book-appointment.php?id=<?php echo $id; ?>" class="btn btn-primary w-100"> Inquire Now</a>
+                            <a href="book-appointment.php?id=<?php echo $id; ?>" class="btn btn-primary w-100 my-2 p-2"> Inquire Now</a>
+                            <button type="button" class="btn btn-primary w-100 my-2 p-2" data-toggle="modal" data-target="#payment-calcuclator-modal"> <i class="fas fa-calculator"></i> &nbsp Payment Calculator</button>
                             <hr class="bg-light">
                             <div class="row">
                                 <div class="col-4">
@@ -218,7 +219,7 @@ if (isset($_GET['id'])){
 }
 
 
-
+include('payment-calculator.php');
 
 
 

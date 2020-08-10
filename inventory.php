@@ -9,13 +9,13 @@ include('config/connect-db.php'); ?>
 <form action="" method="POST">
     <div class="container p-4">
         <div class="row">
-            <div class="col text-right p-2">
+            <div class="text-sm-right p-2 col-sm-3">
                 <label for="search-input" class="text-secondary">Search Anything</label>
             </div>
-            <div class="col">
+            <div class="col-sm-7">
                 <input type="text" class="form-control" id="search-input" placeholder="i.e. 2017 Red C300" name="search">   
             </div>
-            <div class="col">
+            <div class="col-sm-2">
                 <button type="submit" class="btn btn-primary">Search</button>
             </div>
         </div>
@@ -60,7 +60,10 @@ if (isset($_GET['delete_id'])){
 // check if a search query is submitted - query based on the search
 if (isset($_POST['search'])){
     require_once('search-parser.php');
-    $parsed_search = search_parser($_POST['search']);
+    // escape bad characters
+    $cleaned_search_term = $conn -> real_escape_string($_POST['search']);
+    // use the parser function to parse the search term
+    $parsed_search = search_parser($cleaned_search_term);
     
     $query = "SELECT * FROM inventory";
     $i=0;
@@ -121,8 +124,8 @@ if (mysqli_num_rows($result)){
 }else{ ?>
     <div class="container">
         <h2 class="text-secondary text-center m-4">No Results Found</h2>
-        <div class="text-center">
-            <img  src="images/old-mercedes.png" alt="">
+        <div class="text-center m-5">
+            <img  class="img-fluid" src="images/old-mercedes.png" alt="">
         </div>
         
     </div>
