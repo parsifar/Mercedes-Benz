@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #00aabd;
+}
+
 body {
   /* to prevent fixed header hiding top of body */
   padding-top: 145px;
@@ -8,6 +12,25 @@ body {
 }
 .bg-dark {
   background-color: #111 !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: #249ba8;
+  border-color: #007380;
+}
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #249ba8 !important;
+  border-color: #007380 !important;
+  box-shadow: none;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
 }
 
 .cta {
@@ -42,6 +65,9 @@ i.card-img-top {
   bottom: -75px;
   left: 0;
   transition: 200ms ease-in-out;
+}
+.card .blue-slider h3 {
+  font-size: 1.5rem;
 }
 
 .inventory-card {

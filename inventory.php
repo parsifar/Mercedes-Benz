@@ -87,9 +87,11 @@ if (mysqli_num_rows($result)){
     while ($row = $result -> fetch_assoc()): ?>
         <div class="container inventory-card  p-3 my-4">
             <div class="row">
+                
                 <div class="col-lg-4 mt-4">
-                    <img src=<?php echo explode(',',$row['images'])[0]; ?> alt="">
+                    <a href="details.php?id=<?php echo $row['id']; ?>"> <img src=<?php echo explode(',',$row['images'])[0]; ?> alt="car"> </a> 
                 </div>
+
                 <div class="col-lg-8">
                     <h3><?php echo $row['year'].' '. $row['model']; ?></h3>
                     <h6>VIN: <?php echo $row['vin']." &nbsp; &nbsp; &nbsp; STOCK #: ". $row['stock']; ?></h6>

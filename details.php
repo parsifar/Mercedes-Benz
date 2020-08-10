@@ -46,11 +46,11 @@ if (isset($_GET['id'])){
                                     </div>
                                 <?php endforeach; ?>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <a class="carousel-control-prev" href="#car-carousel" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Previous</span>
                             </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <a class="carousel-control-next" href="#car-carousel" role="button" data-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                             </a>
@@ -84,7 +84,7 @@ if (isset($_GET['id'])){
                 <div class="container bg-light py-3">
                     <div class="row">
                         <div class="col text-center">
-                            <h3>Basic Info</h3>
+                            <h3>Vehicle Info</h3>
                         </div>
                     </div>
                     <hr>
