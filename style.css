@@ -13,7 +13,12 @@ body {
 .bg-dark {
   background-color: #111 !important;
 }
-
+.nav-link {
+  color: #ccc !important;
+}
+.nav-link:hover {
+  color: #fff !important;
+}
 .btn-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);

@@ -80,7 +80,7 @@ if (isset($_GET['id'])){
             </div>
 
             <!-- Info section  -->
-            <div class="container-fluid pt-5">
+            <div class="container-fluid pt-5 mb-5">
                 <div class="container bg-light py-3">
                     <div class="row">
                         <div class="col text-center">
@@ -177,13 +177,19 @@ if (isset($_GET['id'])){
                     </div>
 
                 </div>
-                <div class="container py-5">
-                    <div class="row">
-                        <div class="col">
-                            <button class="btn btn-danger float-right" onclick="$('#delete-confirmation-modal').modal();">Delete This Vehicle</button>
+                <?php 
+                if ($logged_in){
+                    ?>
+                        <div class="container py-5">
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-danger float-right" onclick="$('#delete-confirmation-modal').modal();">Delete This Vehicle</button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    <?php
+                } ?>
+                
             </div>
 
             <!-- Delete Confirmation Modal -->

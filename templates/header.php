@@ -1,3 +1,10 @@
+<?php 
+$logged_in = false;
+if (isset($_COOKIE['username'])){
+    $logged_in = true;
+    $username = htmlspecialchars($_COOKIE['username']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +27,9 @@
 <body>
     <header class="fixed-top">
         <div class="bg-dark text-white-50 clearfix pr-4 pt-2 pr-5 small">
-            <p class="mb-0 small"><span class="float-right"><i class="fas fa-map-marker-alt"></i> 761 Dundas St E, Toronto, ON M5A 4N5</span></p>
+            <p class="mb-0 px-2">Welcome <?php echo $username ?? 'Guest' ?>!<span class="float-right"><i class="fas fa-map-marker-alt"></i> 761 Dundas St E, Toronto, ON M5A 4N5</span></p>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light p-4">
             <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt=""><span class="p-3">Mercedes-Benz</span></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,12 +40,31 @@
                 <li class="nav-item">
                     <a class="nav-link" href="inventory.php">View Inventory <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <?php if ($logged_in){ ?>
+                    <li class="nav-item">
                     <a class="nav-link" href="add.php">Add a vehicle</a>
-                </li>
+                    </li>
+                    <?php
+                } ?>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="book-appointment.php">Book an Appointment</a>
                 </li>
+
+                <?php
+                if(!$logged_in){ ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Login / Register</a>
+                    </li>
+                    <?php
+                } else{ ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Logout</a>
+                    </li>
+                    <?php
+                } ?>
+                
+                
                 
             </div>
         </nav>

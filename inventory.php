@@ -1,4 +1,6 @@
 <?php
+
+
 //include header
 include('templates/header.php');
 
@@ -87,7 +89,7 @@ if (mysqli_num_rows($result)){
     while ($row = $result -> fetch_assoc()): ?>
         <div class="container inventory-card  p-3 my-4">
             <div class="row">
-                
+
                 <div class="col-lg-4 mt-4">
                     <a href="details.php?id=<?php echo $row['id']; ?>"> <img src=<?php echo explode(',',$row['images'])[0]; ?> alt="car"> </a> 
                 </div>
