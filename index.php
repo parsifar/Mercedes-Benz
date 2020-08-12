@@ -102,7 +102,7 @@ include('templates/header.php'); ?>
 
 <!-- Testimonial Slider -->
 <div class="container-fluid bg-dark  py-5">
-    <div class=" container testimonial-container">
+    <div class=" container testimonial-container my-5 py-4">
         <div class="testimonial-div bg-light text-center m-4 p-5">
             <img src="images/testimonial/headshot.jpeg" alt="" class="mx-auto mb-3">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga animi provident facere iste, maiores amet! Inventore adipisci quae ex libero nam ut, repudiandae aut magnam repellendus eos amet, enim placeat quam hic rem fuga illum sit! Aliquam ratione quasi, pariatur non vero cupiditate iure officiis consectetur. Vel non inventore cumque, similique fugiat eius nam ducimus obcaecati nostrum, harum deleniti, autem omnis sapiente quaerat! Itaque quia facilis nisi placeat repellendus architecto.</p>
@@ -126,9 +126,9 @@ include('templates/header.php'); ?>
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-6 p-0 bg-div">
-            .
+            
         </div>
-        <div class="col-lg-6 p-5">
+        <div class="col-lg-6 p-5 my-5">
             <h6>Welcome to</h6>
             <h3 class="mb-4">Mercedes-Benz Toronto</h3>
             <p>Mercedes-Benz Toronto is a new and pre-owned Toronto, ON Mercedes-Benz dealership. We proudly serve and ship to the Greater Toronto Area. In our online showroom, you’ll find an outstanding selection of Toronto, ON Mercedes-Benz cars and Mercedes-AMG® vehicles you might not find so easily elsewhere. Or perhaps you’re in the market for Mercedes-Benz vans or vehicles from our Corporate Fleet Program? We can help you with that too. We offer comprehensive service here at Mercedes-Benz Toronto!</p>
@@ -138,7 +138,7 @@ include('templates/header.php'); ?>
 </div>
 
 <!-- Google Maps Section - the script will put the map in this section-->
-<div class="container-fluid p-0">
+<div class="container-fluid p-0 ">
     <div class="map" id="map"></div>
 </div>
 

@@ -1,8 +1,12 @@
 <?php 
+session_start();
+
 $logged_in = false;
-if (isset($_COOKIE['username'])){
+if (isset($_SESSION['username'])){
     $logged_in = true;
-    $username = htmlspecialchars($_COOKIE['username']);
+    $username = htmlspecialchars($_SESSION['username']);
+    $name = htmlspecialchars($_SESSION['name']);
+    echo session_id();
 }
 ?>
 <!DOCTYPE html>
@@ -27,7 +31,7 @@ if (isset($_COOKIE['username'])){
 <body>
     <header class="fixed-top">
         <div class="bg-dark text-white-50 clearfix pr-4 pt-2 pr-5 small">
-            <p class="mb-0 px-2">Welcome <?php echo $username ?? 'Guest' ?>!<span class="float-right"><i class="fas fa-map-marker-alt"></i> 761 Dundas St E, Toronto, ON M5A 4N5</span></p>
+            <p class="mb-0 px-2"> <span class="welcome-msg">Welcome <?php echo $name ?? 'Guest' ?></span> <span class="float-right"><i class="fas fa-map-marker-alt"></i> 761 Dundas St E, Toronto, ON M5A 4N5</span></p>
         </div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light p-4">
             <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt=""><span class="p-3">Mercedes-Benz</span></a>

@@ -95,18 +95,18 @@ if (mysqli_num_rows($result)){
                 </div>
 
                 <div class="col-lg-8">
-                    <h3><?php echo $row['year'].' '. $row['model']; ?></h3>
-                    <h6>VIN: <?php echo $row['vin']." &nbsp; &nbsp; &nbsp; STOCK #: ". $row['stock']; ?></h6>
+                    <h3 class="mt-3 ml-2"><?php echo $row['year'].' '. $row['model']; ?></h3>
+                    <h6 class="ml-2">VIN: <?php echo $row['vin']." &nbsp; &nbsp; &nbsp; STOCK #: ". $row['stock']; ?></h6>
                     
                     <div class="row bg-light p-4 m-1 mt-4">
-                        <div class="col-md-8">
+                        <div class="col-sm-8">
                             <p class="small my-0 text-secondary">Make: <?php echo $row['make']; ?></p>
                             <p class="small my-0 text-secondary">Body: <?php echo $row['body']; ?></p>
                             <p class="small my-0 text-secondary">Exterior: <?php echo $row['exterior']; ?></p>
                             <p class="small my-0 text-secondary">Interior: <?php echo $row['interior']; ?></p>
                             <p class="small my-0 text-secondary">Kilometers: <?php echo $row['kilometers']; ?></p>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-sm-4">
                             <p class="mb-0 small text-secondary">TOTAL PRICE</p>
                             <h2 class="m-0 font-weight-normal">$<?php echo $row['price'] ?></h2>
                             <p class="mt-0 small text-secondary">+ TAX</p>

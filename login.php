@@ -1,4 +1,7 @@
 <?php
+//include header
+include('templates/header.php'); 
+
 //proccessing the login
 if (isset($_POST['submit'])){
     //connect to db
@@ -25,9 +28,10 @@ if (isset($_POST['submit'])){
         if ($conn -> query($query)){ 
             $row = $result -> fetch_assoc(); 
             
-            //if the password is valid set a cookie and go to homepage
+            //if the password is valid set a session variable and go to homepage
             if(password_verify($entered_password , $row['password'])){
-                setcookie('username',$username);
+                $_SESSION['username'] = htmlspecialchars($username);
+                $_SESSION['name'] = htmlspecialchars($row['name']);
                 header('Location: index.php');
             }else{ ?>
             <div class="container p-4">
@@ -42,10 +46,9 @@ if (isset($_POST['submit'])){
     }
 }
 
-//include header
-include('templates/header.php'); ?>
+?>
 
-<!-- Registration Form -->
+<!-- Login Form -->
 <div class="container p-5">
     <h2 class="my-3 mb-5">Login to your account</h2>
     <form action="" method="POST">
